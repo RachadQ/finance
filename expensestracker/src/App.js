@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import bootstrap from 'bootstrap'
@@ -10,9 +9,10 @@ import AddExpenseForm from './components/AddExpenseForm';
 import { AppProvider } from './components/AppContext/AppContext'
 import AddCategoriesForm from './components/AddCategoriesForm'
 /*
-Remove input values from form after submit
-Add Different sections of expense
-group Expenses together
+Add aria-labels
+add names
+add component to create new expense category
+Add logo icon
 */
 function App() {
   return (
