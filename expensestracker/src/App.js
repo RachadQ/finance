@@ -8,7 +8,7 @@ import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList/ExpenseList';
 import AddExpenseForm from './components/AddExpenseForm';
 import { AppProvider } from './components/AppContext/AppContext'
-
+import AddCategoriesForm from './components/AddCategoriesForm'
 /*
 Remove input values from form after submit
 Add Different sections of expense
@@ -40,6 +40,13 @@ function App() {
         <div className='row mt-3'>
           <div className='col-sm'>
             <AddExpenseForm/>
+          </div>
+        </div>
+
+        <h3 ClassName='mt-3'>Add Categories </h3>
+        <div className='row mt-3'>
+          <div className='col-sm'> 
+          <AddCategoriesForm/>
           </div>
         </div>
       </div>

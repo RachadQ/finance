@@ -7,13 +7,14 @@ const AddExpenseForm = () => {
 
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
-
+   
     const onSubmit = (e) => {
         e.preventDefault();
 
         const expense = {
             id: uuidv4(),
             name: name,
+            
             cost: parseInt(cost)
         }
 
