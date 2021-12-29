@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, setState } from "react";
 import { AppContext } from "./AppContext/AppContext";
 import { v4 as uuidv4 } from 'uuid';
 
@@ -21,6 +21,9 @@ const AddExpenseForm = () => {
             type: 'Add_Expense',
             payload: expense
         })
+
+        setName('');
+        setCost('');
     }
     return (
         <form onSubmit = {onSubmit}>
