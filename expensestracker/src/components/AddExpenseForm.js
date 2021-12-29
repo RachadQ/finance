@@ -1,4 +1,4 @@
-import React, { useContext, useState, setState } from "react";
+import React, { useContext, useState } from "react";
 import { AppContext } from "./AppContext/AppContext";
 import { v4 as uuidv4 } from 'uuid';
 
@@ -48,13 +48,14 @@ const AddExpenseForm = () => {
                     <div className="col-sm">
                         <label for="expenseType">Expense Type</label>
                         <select 
+                        required
                         className="form-select" 
                         id="expenseType" 
                         aria-label="Select expense Type"
                         value={type}
                         onChange={e => setType(e.target.value)}
                         >
-                            <option selected>Open this select menu</option>
+                            <option value="" disabled selected hidden>Open this select menu</option>
                             {categories.map(categoryType => {
                                 return <option value={`${categoryType}`}>{categoryType}</option>
                             })}

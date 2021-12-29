@@ -6,7 +6,6 @@ import ExpenseType from "./ExpenseType";
 const ExpenseList = () => {
     const { categories } = useContext(AppContext);
 
-    console.log(useContext(AppContext))
     return (
         <div className="accordion accordion-flush">
             {categories.map(expenseType => {
