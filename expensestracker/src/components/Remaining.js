@@ -9,7 +9,7 @@ const Remaining = () => {
     const alertType = (totalExpense > budget) ? "alert-danger" : "alert-success";
     return (
         <div className={`alert ${alertType}`}>
-            <span>Remaining: ${budget - totalExpense}</span>
+            <span>{(totalExpense > budget) ? `Remaining: -$${Math.abs(budget - totalExpense)}` : `Remaining: $${budget - totalExpense}`} </span>
         </div>
     )
 }
