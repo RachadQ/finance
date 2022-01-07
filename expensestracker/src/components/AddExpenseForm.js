@@ -7,23 +7,15 @@ const AddExpenseForm = () => {
 
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
-<<<<<<< HEAD
-   
-=======
     const [type, setType] = useState('');
 
->>>>>>> 78a8e81daba70ee17cf7087e83d1d1a7306aa7b7
     const onSubmit = (e) => {
         e.preventDefault();
 
         const expense = {
             id: uuidv4(),
             name: name,
-<<<<<<< HEAD
-            
-=======
             type: type,
->>>>>>> 78a8e81daba70ee17cf7087e83d1d1a7306aa7b7
             cost: parseInt(cost)
         }
 
@@ -41,7 +33,7 @@ const AddExpenseForm = () => {
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-sm">
-                        <label for="name">Name</label>
+                        <label htmlFor="name">Name</label>
                         <input
                             required
                             placeholder="Rent"
@@ -51,26 +43,29 @@ const AddExpenseForm = () => {
                             value={name}
                             onChange={e => setName(e.target.value)}
                         >
+                            
                         </input>
                     </div>
                     <div className="col-sm">
-                        <label for="expenseType">Expense Type</label>
+                        <label htmlFor="expenseType">Expense Type</label>
                         <select 
                         required
                         className="form-select" 
+
                         id="expenseType" 
                         aria-label="Select expense Type"
                         value={type}
                         onChange={e => setType(e.target.value)}
                         >
-                            <option value="" disabled selected hidden>Open this select menu</option>
-                            {categories.map(categoryType => {
-                                return <option value={`${categoryType}`}>{categoryType}</option>
+                           
+                            {
+                            categories.map((categoryType,index) => {
+                                return <option key={index}value={`${categoryType}`}>{categoryType}</option>
                             })}
                         </select>
                     </div>
                     <div className="col-sm">
-                        <label for="cost">Cost</label>
+                        <label htmlFor="cost">Cost</label>
                         <input
                             required
                             placeholder="40"

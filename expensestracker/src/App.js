@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import bootstrap from 'bootstrap'
+
 import Budget from './components/Budget';
 import Remaining from './components/Remaining';
 import ExpenseTotal from './components/ExpenseTotal';
@@ -8,6 +8,7 @@ import ExpenseList from './components/ExpenseList/ExpenseList';
 import AddExpenseForm from './components/AddExpenseForm';
 import { AppProvider } from './components/AppContext/AppContext'
 import AddCategoriesForm from './components/AddCategoriesForm'
+import RemoveCategoriesForm from './components/RemoveCategorieForm';
 /*
 Add aria-labels
 add names
@@ -43,12 +44,20 @@ function App() {
           </div>
         </div>
 
-        <h3 ClassName='mt-3'>Add Categories </h3>
+        <h3 className='mt-3'>Add Category </h3>
         <div className='row mt-3'>
           <div className='col-sm'> 
           <AddCategoriesForm/>
           </div>
         </div>
+
+        <h3 className='mt-3'>Remove Category</h3>
+        <div className='row mt-3'>
+          <div className='col-sm'> 
+          <RemoveCategoriesForm/>
+          </div>
+        </div>
+
       </div>
     </AppProvider>
   );

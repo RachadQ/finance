@@ -20,6 +20,24 @@ const AppReducer = (state, action) => {
                 ...state,
                 budget: action.payload
             }
+
+        case 'Add_Category':
+            
+            return{
+
+                ...state,
+                categories: [...state.categories,action.payload]
+                
+            }
+
+        case 'remove_Category':
+            return{
+                
+                ...state,
+                categories: state.categories.filter(cat => cat !== action.payload)
+               
+               
+            }
         default:
             return state;
     }

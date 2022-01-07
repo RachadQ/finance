@@ -18,7 +18,7 @@ const Budget = () => {
         <div className="alert alert-secondary">
             <form onSubmit={handleBudgetChange}>
                 <div className="input-group input-group-sm">
-                    <label for="Budget" className="me-2">Budget:</label>
+                    <label htmlFor="Budget" className="me-2">Budget:</label>
                     <input className="form-control shadow-none" 
                     name="Budget" id="Budget" 
                     type="number" min="0" value={budget}
